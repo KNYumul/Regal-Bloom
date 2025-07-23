@@ -1,0 +1,360 @@
+    @font-face{
+        font-family: 'Snell';
+        src: url('Resources/font/SnellBT-Bold.otf') format('opentype');
+    }
+    .Snell{
+        font-family: 'Snell' !important;
+    }
+
+    @font-face{
+        font-family: TheSeason;
+        src : url('Resources/font/TheSeason-Regular.otf') format('opentype');
+    }
+    .TheSeason{
+        font-family: TheSeason !important;
+    }
+
+    @font-face{
+        font-family: TheSeason-Bold;
+        src : url('Resources/font/TheSeason-Bold.otf') format('opentype');
+    }
+    .TheSeason-Bold{
+        font-family: TheSeason-Bold !important;
+    }
+
+    @font-face{
+        font-family: TheSeason-BoldItalic;
+        src : url('Resources/font/TheSeason-BoldItalic.otf') format('opentype');
+    }
+    .TheSeason-BoldItalic{
+        font-family: TheSeason-BoldItalic !important;
+    }
+
+    @font-face{
+        font-family: TheSeason-Italic;
+        src : url('Resources/font/TheSeason-Italic.otf') format('opentype');
+    }
+    .TheSeason-Italic{
+        font-family: TheSeason-Italic !important;
+    }
+
+
+
+
+
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .text-color{
+        color: #d4ad3b !important;
+    }
+
+    nav a{
+        color:#d4ad3b !important;
+        text-decoration: none;
+    }
+
+    .underlineAnimation{
+        position: relative;
+        display: inline-block;
+        width: fit-content;
+    }
+
+    .underlineAnimation:after{
+        content: "";
+        position: absolute;
+        background-color: #d4ad3b;
+        height: 3px;
+        width: 0;
+        left: 10%;
+        bottom: -3px;
+        transition: 0.3s;
+    }
+    .underlineAnimation:hover{
+        color: #ffffff;
+    }
+    .underlineAnimation:hover:after{
+        width: 80%;
+    }
+
+    nav .nav-link {
+        font-size: 24px  !important;
+        color: #d4ad3b !important;
+    }
+
+    .bg-transparent{
+        background-color: rgba(255,255,255,0.027);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+    }
+
+    .loginBg{
+        background: linear-gradient(180deg, #00018c, #01025d, #010239, #000000);
+    }
+
+    .registrationBg{
+        background: linear-gradient(180deg, #00018c, #030369, #000030, #000000);
+    }
+
+    .userHomePageBg{
+        background: linear-gradient(180deg, #000000, #000000, #00018c, #00018c, #00018c, #00018c, #00018c,#000000, #000000);
+
+    }
+
+    .adminBg{
+        background-color: #01025a;
+    }
+
+    .mainBox{ 
+        background-color: #FFF6EA;
+        height: fit-content;
+        width: 40%;
+        border-radius:.8cm !important;
+    }
+
+    .registrationBox{
+        background-color: #FFF6EA;
+        height: fit-content;
+        width: 80%;
+        border-radius:.8cm !important;
+    }
+
+    .logoImage{
+        width: 8cm;
+
+    }
+
+    .googleImage{
+        height: .7cm;
+    }
+
+    .googleBtn{
+        background-color:#e2e0e0;
+        border-radius: 15cm;
+    }
+
+    .googleBtn:hover{
+        background-color:#dbd7d7;
+    }
+
+
+
+    .submitBtn{
+        background-color:#ffcf00;
+        border-radius:15cm;  
+
+    }
+
+    .submitBtn:hover{
+        background-color:#e7bc01;
+        font-weight: bold;
+
+    }
+
+    .registerText{
+        font-size: 14;
+    }
+
+    .t1{
+        font-size: 16px;
+
+    }
+
+    .t8{
+        font-size: 24px;
+    }
+
+    .t4{
+        font-size: 28px;
+    }
+
+    .t5{
+        font-size: 44px;
+    }
+
+    .t2{
+        font-size: 68px;
+    }
+
+    .t3{
+        font-size: 60px;
+    }
+
+    .t7{
+        font-size: 52px;
+    }
+
+    .t6{
+        font-size: 80px;
+    }
+
+    .mirror{
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+    }
+
+    .mt-10{
+        margin-top: 4rem;
+    }
+
+    .banner-crop {
+        width: 100%;
+        height: 500px; /* Adjust this height as needed */
+        overflow: hidden;
+        position: relative;
+    }
+
+    /* fade on the top */
+    .banner-crop::after {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        pointer-events: none;
+        background: linear-gradient(
+            to bottom,
+            rgba(0,0,0,1) 0%,
+            rgba(0,0,0,.6) 10%,
+            rgba(0,0,0,0.1) 70%,
+            rgba(0,0,0,0) 100%
+        );
+        z-index: 2;
+    }
+
+    /* fade on the bottom */
+    .banner-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 30%;
+        display: block;
+        opacity: 0.8; /* light and darkness of image */
+        -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 90% , transparent 100%);
+        mask-image: linear-gradient(to bottom, black 70%, transparent 90%, transparent 100%);
+    }
+
+    #candidateBanner-position{
+        object-position: center 25%;
+    }
+
+    #categoriesBanner-position{
+        object-position: center 55%;
+    }
+
+    #votingBanner-position{
+        object-position: center 25%;
+    }
+
+    .banner-text{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -55%);
+        color: #fff;
+        text-align: center;
+        z-index: 3;
+    }
+
+    .about-section {
+        position: relative;
+        background-image: url('Resources/sparkle.png');
+        background-repeat: no-repeat;
+        background-position: center 40%;
+        background-size: 100% auto;
+        padding-top: 60px;
+        padding-bottom: 40px;
+        min-height: 300px;
+        z-index: 1;
+    }
+
+    .gallery{
+        column-count: 4;
+    }
+
+    .gallery img{
+        margin-bottom: 1em;
+    }
+
+
+    .active{
+        background-color: #d4ad3b !important;
+        color: #000000 !important;
+    }
+
+    .Btn-custom{
+        background-color: #d4ad3b !important;
+        color: #000000 !important;
+    }
+
+    .Btn-custom:hover{
+        background-color: #b38a2c !important;
+        color: #000000 !important;
+    }
+
+    .candidate-radio{
+        display: none;
+    }
+
+    .candidate-label{
+        display: block;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .candidate-label img{
+        border: 3px solid transparent;
+        border-radius: 10px;
+        transition: border 0.1s;
+        cursor: pointer;
+    }
+
+    .candidate-radio:checked + .candidate-label img{
+        border: 3px solid #d4ad3b;
+        box-shadow: 0 0 30px #d4ad3b;
+    }   
+
+    .voteButton{
+        background-color: #d4ad3b !important;
+        color: #000000 !important;
+        width: 50%;
+        border-radius: 20px;
+    }
+
+    .voteButton:hover{
+        background-color: #b38a2c !important;
+    }
+
+    .winner-image {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 8px;
+        border: 2px solid gold;
+    }
+
+    .winner-card {  
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 15px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .category-section {
+        margin: 40px 0;
+    }
+
+    .category-title {
+        background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+        color: white;
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
